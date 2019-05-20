@@ -28,6 +28,18 @@ end
 # x.flatten.compact.join(" ")
 # end
 
+
 def word_substituter(tweet)
-    let terms = dictionary.keys
-    tweet.split(" ")
+    terms = dictionary.keys
+    tweet_arr = tweet.split(" ")
+
+    short_tweet = tweet_arr.collect do |word|
+      if terms.include?(word)
+        p "pass"
+        dictionary[word]
+      else
+        word
+      end
+    end     
+      short_tweet
+end
