@@ -29,4 +29,5 @@ end
 # end
 
 def word_substituter(tweet)
-    
+    let terms = dictionary.keys
+    tweet.split(" ")
